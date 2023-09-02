@@ -1,0 +1,18 @@
+micronaut:
+  security:
+    enabled: true
+    token:
+      jwt:
+        enabled: true
+        claims-validators:
+          issuer: https://dev-85648328.okta.com/oauth2/default
+        signatures:
+          jwks:
+            okta:
+              url: https://dev-85648328.okta.com/oauth2/default/v1/keys
+  application:
+    name: micronaut-okta
+netty:
+  default:
+    allocator:
+      max-order: 3
